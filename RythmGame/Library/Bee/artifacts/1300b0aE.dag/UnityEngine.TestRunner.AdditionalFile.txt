@@ -1,1 +1,1 @@
-/Users/kyujin/unitylearn/RythmGame
+/Users/kyujin/unity-rythm/RythmGame
