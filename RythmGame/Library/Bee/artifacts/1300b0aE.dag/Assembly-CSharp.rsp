@@ -358,14 +358,22 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CenterFrame.cs"
+"Assets/Scripts/Controller/CameraController.cs"
 "Assets/Scripts/Controller/PlayerController.cs"
+"Assets/Scripts/DeadZone.cs"
 "Assets/Scripts/Manager/ComboManager.cs"
 "Assets/Scripts/Manager/EffectManager.cs"
 "Assets/Scripts/Manager/Note.cs"
 "Assets/Scripts/Manager/NoteManager.cs"
 "Assets/Scripts/Manager/ScoreManager.cs"
+"Assets/Scripts/Manager/Stage.cs"
+"Assets/Scripts/Manager/StageManager.cs"
+"Assets/Scripts/Manager/StatusManager.cs"
 "Assets/Scripts/Manager/TimingManager.cs"
+"Assets/Scripts/Menu/Result.cs"
 "Assets/Scripts/ObjectPool.cs"
+"Assets/Scripts/Plate/BasicPlate.cs"
+"Assets/Scripts/Plate/GoalPlate.cs"
 -langversion:9.0
 
 /deterministic

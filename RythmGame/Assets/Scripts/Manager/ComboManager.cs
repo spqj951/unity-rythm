@@ -8,6 +8,7 @@ public class ComboManager : MonoBehaviour
     [SerializeField] UnityEngine.UI.Text txtCombo = null;
 
     int currentCombo = 0;
+    int maxCombo = 0;
 
     Animator myAnime;
     string comboUpAnime = "ComboUp";
@@ -22,7 +23,10 @@ public class ComboManager : MonoBehaviour
     {
         currentCombo += p_num;
         txtCombo.text = string.Format("{0:#,##0}", currentCombo);
-
+        if(maxCombo < currentCombo)
+        {
+            maxCombo = currentCombo;
+        }
         if(currentCombo > 2)
         {
             goComboImage.SetActive(true);
@@ -41,5 +45,10 @@ public class ComboManager : MonoBehaviour
         txtCombo.text = "0";
         txtCombo.gameObject.SetActive(false);
         goComboImage.SetActive(false);
+    }
+
+    public int GetMaxCombo()
+    {
+        return maxCombo;
     }
 }
