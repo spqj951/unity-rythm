@@ -42,6 +42,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.isStartGame)
+        {
+
         CheckFalling();
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.W) )
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
                     StartAction();
                 }
             }
+        }
         }
     }
 
@@ -147,7 +151,9 @@ public class PlayerController : MonoBehaviour
     public void ResetFalling()
     {
         theStatus.DecreaseHp(1);//떨어지면 체력감소
-        if (!theStatus.IsDead())//죽지 않았다면
+        AudioManager.instance.PlaySFX("Falling");
+
+        if (!theStatus.IsDead())//죽지 않았다면 
         {
 
         isFalling = false;

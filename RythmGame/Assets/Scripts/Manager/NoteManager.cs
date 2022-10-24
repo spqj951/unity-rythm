@@ -7,7 +7,7 @@ public class NoteManager : MonoBehaviour
     public int bpm = 0;
     double currentTime = 0d;//노트 생성을 위한 시간을 체크할 변수 오차 줄이기 위해 double
 
-    bool noteActive = true;//노트 생성 관련
+    
 
     [SerializeField] Transform tfNoteAppear = null;//노트 생성 위치 
     
@@ -25,7 +25,7 @@ public class NoteManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (noteActive)
+        if (GameManager.instance.isStartGame)
         {
             currentTime += Time.deltaTime; //1초에 1씩 증가시.
 
@@ -62,7 +62,8 @@ public class NoteManager : MonoBehaviour
     }
     public void RemoveNote()
     {
-        noteActive = false;
+        GameManager.instance.isStartGame = false;
+
         for(int i =0; i < theTimingManager.boxNoteList.Count; i++)
         {
             theTimingManager.boxNoteList[i].SetActive(false);
